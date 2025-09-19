@@ -1,24 +1,15 @@
-# Level 1 Heading
+# Set Up Your Environment and Configure Access
+To interact with SAP AI Core and use the grounding capability , you first need to create a service key that grants secure access to your AI Core instance. 
+Therefore you need to login into the BTP account [AI167](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63&//detail/862bffe2-c93b-4314-beef-18ccd09393b3/?layout=TwoColumnsMidExpanded-) by using the following username **AI167-xxx@education.cloud.sap** and Password **Adm1nteched25**. 
 
-In this exercise, you will...
+**Note**: Please replace xxx with your userid.
+
+<br>![](/exercises/ex0/images/btp_sign_in.png)
+
+Once you successfully logged in, follow the step **"Create Services Key"** on [help.sap.com](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-service-key)
 
 ## Level 2 Heading
 
-After completing these steps you will have....
-
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
-
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
 
 ## Summary
 
