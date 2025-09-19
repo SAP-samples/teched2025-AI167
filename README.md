@@ -1,12 +1,12 @@
-# Session ID - Session Title
+# AI167 - Ground your AI in business context: A hands-on with document grounding
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2025 session called AI167 - Ground your AI in business context: A hands-on with document grounding.  
 
 ## Overview
 
-This session introduces attendees to...
+In this hands-on session, learn how to drive your custom AI use cases using document grounding capabilities in the generative AI hub. You can build and test a grounded AI scenario with your custom data using new features like multimodal input and contextualization.
 
 ## Requirements
 
