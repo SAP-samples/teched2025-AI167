@@ -1,44 +1,19 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Get Started with Grounding
 
-In this exercise, we will create...
+In this exercise, we'll start exploring the grounding on SAP AI Core. Grounding allows Large Language Models (LLMs) to reference specific knowledge sources when generating responses, which can help improve accuracy and relevance. 
 
-## Exercise 1.1 Sub Exercise 1 Description
+We'll start with the basics by grounding an LLM using SAP.help as our knowledge source. 
 
-After completing these steps you will have created...
+This exercise will cover:
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+* Basic grounding concepts in SAP AI Core
+* How to set up grounding with a document source
+* Comparing responses with and without grounding
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
+For this excercise continue in Visual Code. 
 
 
-
-## Exercise 1.2 Sub Exercise 2 Description
-
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+Continue to - [Exercise 1 - Get Started with Grounding ](#ex1-grounding-basics.ipynb)
 
 
-## Summary
-
-You've now ...
-
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
 

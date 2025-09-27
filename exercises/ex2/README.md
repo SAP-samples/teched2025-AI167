@@ -1,42 +1,30 @@
-# Exercise 2 - Exercise 2 Description
+# Excercise 2: Ground your LLM with Custom Documents
 
-In this exercise, we will create...
+Besides grounding your LLM with SAP help you can of course ground your LLM with you own documents. The document file that the grounding service support here are PDF, HTML, TXT, JPEG, JPG, DOCX, PNG, TIFF, PPT.
+However to use Grounding you need to prepare a knowlegde base in advance. Generative AI hub provides two otions for the users to provide data (prepare knowledege base):
 
-## Exercise 2.1 Sub Exercise 1 Description
+* Option 1: Provide the chunks of document via Vector API directly
+* Option 2: Upload the documents to supported data repository and run the data pipeline to vectorize the documents
 
-After completing these steps you will have created...
+In the following you will get to know both option, and we start with option 1
 
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
+## Excercise 2.1: Provide the chunks of documents via Vector API directly
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ). 
-```
+In the following we will do the following steps:
++ Prepare the Vector Knowledge Base
+    1. Create Collection
+    2. Create documents by directly using the chunks of data provided by users
+    3.  Store data in the vector database
+    4.  Assign repository IDs to access the data
+* Configure Grounding Module in the Orchestration 
+    1. Create a grounding request configuration in the orchestration pipeline using repository IDs
+    2.  Run the orchestration pipeline and check that the response refers to the user data
 
-
-
-## Exercise 2.2 Sub Exercise 2 Description
-
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex2/images/02_02_0010.png)
+> 🟨 **TODO:**  
+> _Add Excercise with Bruno and Vector API_
 
 ## Summary
 
-You've now ...
+For the next excercise you will go back to Visual Code.
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+Continue to - [Exercise 2.2: Run data pipeline to vectorize documents](ex2-2-grounding-custom-documents.ipynb)

@@ -1,12 +1,18 @@
 # AI167 - Ground your AI in business context: A hands-on with document grounding
 
+> ⚠️ **Work in Progress**
+>
+> This documentation is still under development. Content, instructions, and examples may change. Please check back for updates.
+>
+> 🟨 **Note:** Please keep remain the **private** until the content is finalized.
+
 ## Description
 
 This repository contains the material for the SAP TechEd 2025 session called AI167 - Ground your AI in business context: A hands-on with document grounding.  
 
 ## Overview
 
-In this hands-on session, learn how to drive your custom AI use cases using document grounding capabilities in the generative AI hub. You can build and test a grounded AI scenario with your custom data using new features like multimodal input and contextualization.
+In this hands-on session, will learn how to drive your custom AI use cases using document grounding capabilities in the generative AI hub. You can build and test a grounded AI scenario with your custom data using new features like multimodal input and contextualization.
 
 ## Requirements
 
@@ -16,18 +22,15 @@ The requirements to follow the exercises in this repository are...
 
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Getting Started](exercises/ex0/README.md)
+- [Exercise 1 - Get Started with Grounding ](exercises/ex1/)
+- [Exercise 2 - Ground you LLM with Custom Documents](exercises/ex2/)
+    - [Exercise 2.1 - Provide chunks of documents via Vector API](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.2 - Using the Pipeline API](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Contextualization](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Exercise 2.2 - Multi-Modal Capability](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-  
-**OR** Link to the Tutorial Navigator for example...
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
 
 **IMPORTANT**
 
