@@ -1,4 +1,17 @@
-# Excercise 2: Ground your LLM with Custom Documents
+# Excercise 3: Ground your LLM with Custom Documents
+
+ 
+## Step 2: Setup Bruno Environment
+- Open Bruno
+- import AI167_Grounding 
+- configure the environment
+- import S3 Object Store 
+- configure the environment 
+
+### Object Store Services Key 
+-- To Do: Click path to object store service key
+
+
 
 Besides grounding your LLM with SAP help you can of course ground your LLM with you own documents. The document file that the grounding service support here are PDF, HTML, TXT, JPEG, JPG, DOCX, PNG, TIFF, PPT.
 However to use Grounding you need to prepare a knowlegde base in advance. Generative AI hub provides two otions for the users to provide data (prepare knowledege base):

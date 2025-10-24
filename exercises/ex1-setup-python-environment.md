@@ -1,20 +1,9 @@
 
-# Hands-On Setup
+# Setup Python Environment
 
-Before you can get started you first need to set-up you workshop environment:
-- [Hands-On Setup](#hands-on-setup)
-  - [Step 1: Setup Python Environment](#step-1-setup-python-environment)
-    - [1.1 Open Visual Studio code and clone Git Repo](#11-open-visual-studio-code-and-clone-git-repo)
-    - [1.2 Configure connection details for AI Core](#12-configure-connection-details-for-ai-core)
-    - [1.3 Create a Python virtual environment](#13-create-a-python-virtual-environment)
-  - [Step 2: Setup Bruno Environment](#step-2-setup-bruno-environment)
-    - [Object Store Services Key](#object-store-services-key)
-- [Summary](#summary)
+For some of the excersises we will use **Visual Studio Code** to to run our pyton code. 
 
-## Step 1: Setup Python Environment
-For the Hands-on Session we will use **Visual Studio Code** to to run our pyton code. 
-
-### 1.1 Open Visual Studio code and clone Git Repo
+## 1.1 Open Visual Studio code and clone Git Repo
 
 Open "Visual Studio Code" on your laptop. 
 <p>
@@ -41,7 +30,7 @@ If everything was successful you should see the following folder structure in yo
 <img src="images/success_repo.png" alt="Visual Studio Code" width="900"/>
 </p>
 
-### 1.2 Configure connection details for AI Core 
+## 1.2 Configure connection details for AI Core 
 For this Hands-on Session we will use the grounding service on AI Core. 
 To interact with AI Core, we need to get the service keys and add it to our python enivornment.
 The serivce keys you will get in the BTP cockpit in the respective service instance, as described in the next steps. 
@@ -83,7 +72,7 @@ Once you successfully logged in, you will be redirected to the BTP Cockpit. To s
 ➡️  Save the file. 
 
 
-### 1.3 Create a Python virtual environment 
+## 1.3 Create a Python virtual environment and install the SAP Cloud SDK for AI
 ➡️ Start a new Terminal 
 <p>
 <img src="images/open_terminal.png" width="900"/>
@@ -100,20 +89,19 @@ source ai167env/bin/activate
 <p>
 <img src="images/env_active.png" width="900"/>
 </p>
+➡️ Install SAP Cloud SDK for AI (Python)
 
-## Step 2: Setup Bruno Environment
+```python
+pip install --require-virtualenv -U  "sap-ai-sdk-gen[all]" 
+```
 
+> ✨ **More information**  
+> To learn more about SAP CLoud SDK for AI (Python) go [here](https://help.sap.com/doc/generative-ai-hub-sdk/CLOUD/en-US/_reference/README_sphynx.html)  
+> All available SAP Cloud SDK for AI you can find [here](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/libraries-and-sdks)
 
-### Object Store Services Key 
--- To Do: Click path to object store service key
+# For the next Excercise, continue in Visual Studio Code
 
+> 🟨 **TODO:**  
+> _Add screenshot for Visual Code_
 
-
-
-# Summary
-
-Now everything is ready to start the excercises. 
-
-For the next excercise continue in Visual Code.
-
-Continue to - [Exercise 1 - Get Started with Grounding ](ex1-grounding-basics.ipynb)
+Continue to - [Exercise 2 - Get Started with Grounding ](ex2-get-started-with-grounding.ipynb)
