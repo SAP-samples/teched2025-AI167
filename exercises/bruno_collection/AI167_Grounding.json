@@ -1694,7 +1694,7 @@
         },
         {
           "name": "resource_group",
-          "value": "default",
+          "value": "AI167",
           "enabled": true,
           "secret": false,
           "type": "text"

@@ -1,6 +1,9 @@
 # Exercise 3: Ground your LLM with Custom Documents
 
 Besides grounding your LLM with SAP help you can of course ground your LLM with you own documents. The document file that the grounding service support here are PDF, HTML, TXT, JPEG, JPG, DOCX, PNG, TIFF, PPT.
+
+TODO: add multimodal file types above?
+
 However to use Grounding you need to prepare a knowledge base in advance.
 
 Let us use the following example to deep dive into it:
@@ -14,7 +17,8 @@ Generative AI hub provides two ways to prepare and load these knowledge bases:
 
 We'll start in with Option 1 and later look at Option 2 in Exercise 3.2, so by the end you'll know how to ground Kasimir's Policies -- or any other documents -- using both of the approaches. 
 
- # Exercise 3.1: Provide the chunks of document via **Vector API** directly
+# Exercise 3.1: Provide the chunks of document via **Vector API** directly
+
 ## Setup Bruno Environment
 
 To use the Vector API we need to the API client Bruno. 
@@ -73,7 +77,7 @@ Use the following mapping add the correct Name-Value pair:
 <img src="images/bruno_add_values.png" width="900"/>
 </p>
 
-➡️ After you added teh values, select **Save** and then **Activate**
+➡️ After you added the values, select **Save** and then **Activate**
 
 <p>
 <img src="images/bruno_activate_config.png" width="900"/>
@@ -123,7 +127,7 @@ Your payload should look like the following:
 <img src="images/payload_create_collection.png" width="350"/>
 </p>
 
-➡️ Execute the POST request (3). If all went well you should receive the return code 202. 
+➡️ Execute the POST request (3). If all went well you should receive the return code 202 with an empty response body.
 
 ### Get Collection ID
 
@@ -230,6 +234,9 @@ Your body should look like the following:
 </code></pre>
 </div>
 
+TODO: I would move the COLLECTION_ID instruction further up, right after we copy the collection id from Bruno - to avoid
+copying it twice.
+
 ➡️ Replace the ```<COLLECTION_ID>``` in the URL and run the request. 
 
 <p>
@@ -252,20 +259,23 @@ There are several API Request, that help to inspect the vector collections and d
 Let is run one of them, to check whether the chunks were successfully created. 
 
 ➡️ Select ```GET get_documents_by_id ```(1).  
-➡️ Replace in the request the ```<COLLECTION_ID>```and ```<DOCUMENT_ID>```by the IDs that you got from the previews steps (2).  
+➡️ Replace in the request the ```<COLLECTION_ID>```and ```<DOCUMENT_ID>``` by the IDs that you got from the previews steps (2).  
 ➡️ Run the request (3).  
 
 <p>
 <img src="images/get_document_by_id.png" width="900"/>
 </p>
 
-Response includes all the chunks for the document collection. Additionally you can also see that each chunks consist of an id as well information about the language of each chunk. 
+Response includes all the chunks for the document collection. Additionally, you can also see that each chunks consist of an id as well information about the language of each chunk. 
 
 <p>
 <img src="images/response_get_documents.png" width="900"/>
 </p>
 
 ### Overview of all data repositories
+
+TODO: link missing below?
+
 Next we will use the [Retrieval API]().
 The **Retrieval API** lets you retrieve repositories or collections created through the Vector API. 
 
@@ -291,39 +301,40 @@ Next let us do the data retrieval to retrieve a content based answer, by using o
 </p>
 
 In the body of the retrieval search you can define several retrieval constraints. Most of them are optional and can be empty. The one that are relevant for our exercise are:
-- ```query``` that will be embed and match against the stored chunks
+- ```query``` that will be embedded and match against the stored chunks
 - ```dataRepositoryType``` to define the kind of data repository, in our case **vector**
 - ```maxChunkCount```: maximum number of chunks to be returned
 
 
-➡️ Next replace in the Body ```<QUERY>```  by ``` "Are cats allowed at TechEd? " ```  
+➡️ Next replace in the Body ```<QUERY>```  by ``` "Are cats allowed at TechEd?"```  
 ➡️ Run the request. 
 
 <p>
 <img src="images/replace_run.png" width="900"/>
 </p>
 
-The response includes now the two relevant chunks identified using the similarity search on the HANA vector Store.  
+The response includes now the two relevant chunks identified using the similarity search on the HANA vector Store.
+
 For each chunk the response also returns the ```searchScores``` that includes:
-- ```aggregatedScore```: Final score after optional fusion (e.g. combining dense, sparse, keyword, recency)
+- ```aggregatedScore```: Final score after combining multiple ranking methods. Today, only dense retrieval is supported,
+  hence this is the same as `denseRetrievalScore`.
 - ```denseRetrievalScore```: Similarity between the query embedding and the chunk embedding (Higher = more semantically relevant).   
 
-This helps to rank the chunks by score to select top-k context for grounding e.g.
+The scores can be used on the client to apply a similarity threshold.
 
 🎉 Congratulations you successfully created you first data repository and run your first retrieval search. 🎉
 
-If you want more you can also try out the following queries and also change number of ```maxCHunkCount```.
-```
-Questions:
+If you want more you can also try out the following queries and also change number of ```maxChunkCount```.
 
-"How do I start a prompt?"
-"What happens if Kasimir walks on stage during a talk?"
-"Who is allowed to wear a '#1 AI Expert' hoodie?"
-```
+* `"How do I start a prompt?"`
+* `"What happens if Kasimir walks on stage during a talk?"`
+* `"Who is allowed to wear a '#1 AI Expert' hoodie?"`
+
+
 ## Summary
 
-In this exercise you got to know one of the option that Generative AI hub provides to provide data repository. 
-You used the Vector API to provide the chunks of document directly and used the Retrieval API to run a similarity search on the HANA vector Store. 
+In this exercise you got to know one of the option that Generative AI Hub provides to prepare a data repository.
+You used the Vector API to provide the chunks of document directly and used the Retrieval API to run a similarity search on the HANA vector store. 
  
 In our next Exercise you well get to know the other option of preparing a data repository by upload the documents to s3 bucket and run the data pipeline to vectorize the documents. 
 

@@ -26,9 +26,13 @@ Data Management APIs:
 
 The requirements to follow the exercises in this repository are...
 
+TODO: fill in.
+
 ## Exercises
 
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+
+TODO: the links below are broken
 
 - [Getting Started](exercises/ex0-hands-on-setup.md)
 - [Exercise 1 - Get Started with Grounding ](exercises/ex1-grounding-basics.ipynb)
@@ -38,11 +42,6 @@ Provide the exercise content here directly in README.md using [markdown](https:/
     - [Exercise 2.2 - Contextualization](exercises/ex2#exercise-22-sub-exercise-2-description)
     - [Exercise 2.2 - Multi-Modal Capability](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
@@ -55,4 +54,5 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
+
 Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
