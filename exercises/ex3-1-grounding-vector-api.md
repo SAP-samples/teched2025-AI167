@@ -14,7 +14,7 @@ Generative AI hub provides two ways to prepare and load these knowledge bases:
 
 We'll start in with Option 1 and later look at Option 2 in Exercise 3.2, so by the end you'll know how to ground Kasimir's Policies -- or any other documents -- using both of the approaches. 
 
- # Exercise 3.1: Provide the chunks of document via **Vector API** directly
+# Exercise 3.1: Provide the chunks of document via Vector API directly
 ## Setup Bruno Environment
 
 To use the Vector API we need to the API client Bruno. 
