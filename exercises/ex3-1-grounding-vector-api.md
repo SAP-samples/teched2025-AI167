@@ -53,7 +53,7 @@ The Bruno collection you find under ```TECHED2025-AI167/exercise/bruno_collectio
 We are almost there. As the final step we need to set the environment variables to establish the connection to AI Core. 
 
 ➡️ Click on ```AI167_Grounding```to expand the folder (1).  
-➡️ Click in top right corner on ```No Environments``` (2)   
+➡️ Click at top right corner on ```No Environments``` (2)   
 ➡️ Select ```Configure``` to start setting the environment variables. 
 <p>
 <img src="images/bruno_open_config.png" width="900"/>
@@ -327,6 +327,4 @@ You used the Vector API to provide the chunks of document directly and used the 
  
 In our next Exercise you well get to know the other option of preparing a data repository by upload the documents to s3 bucket and run the data pipeline to vectorize the documents. 
 
-For the next exercise you will go back to Visual Studio Code.
-
-Continue to - [Exercise 3.1: Run data pipeline to vectorize documents](ex3-2-grounding-data-pipeline.ipynb)
+Continue to - [Exercise 3.2: Upload File to S3](ex3-2-upload-file-s3.md)
