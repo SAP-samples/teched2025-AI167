@@ -24,23 +24,20 @@ Data Management APIs:
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+The requirements to follow the exercises in this repository are:
+- Visual Code Studio
+- Bruno 
 
-TODO: fill in.
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
-
-TODO: the links below are broken
-
-- [Getting Started](exercises/ex0-hands-on-setup.md)
-- [Exercise 1 - Get Started with Grounding ](exercises/ex1-grounding-basics.ipynb)
-- [Exercise 2 - Ground you LLM with Custom Documents](exercises/ex2-vector-api.md)
-    - [Exercise 2.1 - Provide chunks of documents via Vector API](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Using the Pipeline API](exercises/ex2#exercise-22-sub-exercise-2-description)
-    - [Exercise 2.2 - Contextualization](exercises/ex2#exercise-22-sub-exercise-2-description)
-    - [Exercise 2.2 - Multi-Modal Capability](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Setup Python Environment ](exercises/ex1-setup-python-environment.md)
+- [Exercise 2 - Get started with Grounding](exercises/ex2-get-started-with-grounding.ipynb)
+- [Exercise 3 - Ground your LLM with Custom Documents](exercises/ex3-1-grounding-vector-api.md)
+    - [Exercise 3.1 - Provide chunks of documents via Vector API](exercises/ex3-1-grounding-vector-api##exercise31-Provide-the-chunks-of-document-via-Vector-API-directly)
+    - [Exercise 3.2 - Upload File to S3](exercises/ex3-2-upload-file-s3.md)
+    - [Exercise 3.3 - Use data pipeline to vectorize documents](exercises/ex3-3-grounding-data-pipeline.ipynb)
+- [Exercise 4 - Multi-Modal Capability](exercises/ex4-multi-modal.ipynb) 
 
 
 ## Contributing

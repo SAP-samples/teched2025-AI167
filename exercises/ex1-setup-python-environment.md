@@ -1,7 +1,7 @@
 
 # Setup Python Environment
 
-For some of the excersises we will use **Visual Studio Code** to to run our pyton code. 
+For some of the exercises we will use **Visual Studio Code** to to run our python code. 
 
 ## 1.1 Open Visual Studio code and clone Git Repo
 
@@ -10,7 +10,7 @@ Open "Visual Studio Code" on your laptop.
 <img src="images/vsc.png" alt="Visual Studio Code" width="60"/>
 </p>
 
-Once you opened your Visual Studio Code, you will see the **Welcome** tab. In this Welcome tab select under the **Start** section the option ```Clone Git Repository ``` to clone this Git repository with the excercises using the following URL  
+Once you opened your Visual Studio Code, you will see the **Welcome** tab. In this Welcome tab select under the **Start** section the option ```Clone Git Repository ``` to clone this Git repository with the exercises using the following URL  
 ```sh
 https://github.com/SAP-samples/teched2025-AI167.git 
 ```
@@ -43,13 +43,12 @@ Please log in with your username and password provided in the workshop room and 
 <img src="images/btp_login.png" width="900"/>
 </p>
 
-Once you successfully logged in, you will be redirected to the BTP Cockpit. To see the list of subbaccount you need to click on **Account Explorer**.
+Once you successfully logged in, you will be redirected to the BTP Cockpit. To see the list of subaccount you need to click on **Account Explorer**.
 
-➡️ Next click on the tile of your respective subbacount **AI167_XXX**.
+➡️ Next click on the tile of your respective subaccount **AI167_XXX**.
 
 TODO: I just tried this with the test account 042, and I am immediately redirected to the subaccount. I think your screenshots
 are taken from the admin account, which has access to all the subaccounts.
-
 <p>
 <img src="images/access_subaccount.png" width="900"/>
 </p>
@@ -70,8 +69,7 @@ TODO: this is not possible when logged in as non-admin user. I mailed Zonghua ab
 <img src="images/new_file.png" width="900"/>
 </p>
 
-➡️ Paste in the service key into ```TECHED2025-AI167/.aicore-config.json```, which should look similiar to the following.
-
+➡️ Paste in the service key into ```TECHED2025-AI167/.aicore-config.json```, which should look similar to the following.
 <p>
 <img src="images/config_file.png" width="900"/>
 </p>
