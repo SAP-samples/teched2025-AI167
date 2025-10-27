@@ -125,9 +125,11 @@ pip install --require-virtualenv -U  "sap-ai-sdk-gen[all]"
 > To learn more about SAP CLoud SDK for AI (Python) go [here](https://help.sap.com/doc/generative-ai-hub-sdk/CLOUD/en-US/_reference/README_sphynx.html)  
 > All available SAP Cloud SDK for AI you can find [here](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/libraries-and-sdks)
 
-# For the next Excercise, continue in Visual Studio Code
+# For the next Exercise, continue in Visual Studio Code
 
-> 🟨 **TODO:**  
-> _Add screenshot for Visual Code_
+⚠️  In case Visual Studio Code ask to install ipykernel package - simple click install.
+<p>
+<img src="images/vsc_install_kernel.png" width="700"/>
+</p>
 
 Continue to - [Exercise 2 - Get Started with Grounding ](ex2-get-started-with-grounding.ipynb)
