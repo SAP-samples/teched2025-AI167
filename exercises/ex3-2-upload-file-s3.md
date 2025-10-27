@@ -1,7 +1,7 @@
 # Exercise 3.2: Upload file to S3 Object Store
 
 Before we can use the Pipeline API to create a data grounding pipeline we first need to ingest our document to da supported data source.
-Overall the grounding module in GenAI Hun supports as of today the following data repositories:
+Overall the grounding module in GenAI Hub supports as of today the following data repositories:
 * Microsoft Share Point 
 * AWS S3
 * SFTP 
@@ -10,7 +10,7 @@ Overall the grounding module in GenAI Hun supports as of today the following dat
 
 For this Hands-on Session we will use the **AWS S3 object store** as data repository. 
 
-For these step we are use again our API Client Bruno (Hope Kasimir is ok with that). 
+For these step we are again use our API Client Bruno (Hope Kasimir is ok with that). 
 
 
 ## Configure connection to S3 Object Store 

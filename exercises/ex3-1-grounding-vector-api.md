@@ -40,12 +40,12 @@ Once you opened your **Bruno**, you will see the **Welcome** page.
 
 The Bruno collection you find under ```TECHED2025-AI167/exercise/bruno_collection/AI167_Grounding.json```. ( The location of the folder ```TECHED2025-AI167``` is the one you chose in Exercise 1 while cloning the github repos ) 
 
-➡️ Navigate to the ```TECHED2025-AI167/exercise/bruno_collection```and select ```AI167_Grounding.json```and select **Open**
+➡️ Navigate to the ```TECHED2025-AI167/exercise/bruno_collection```and select both collection in this folder:  ```AI167_Grounding.json```and ```S3_FileUpload.json``` (second one we need in [Exercise 3.2](exercise/ex3-2-upload-file-s3.md)) and select **Open**.
 <p>
 <img src="images/bruno_open_collection.png" width="900"/>
 </p>
 
-➡️ Select **Browse** to choose a location ( simple use the same location) and select **Import**
+➡️ Choose a location (use simple the same location) and select **Import**
 <p>
 <img src="images/bruno_choose_location.png" width="900"/>
 </p>
@@ -105,11 +105,11 @@ First we need to generate an access token, that is required for authenticating A
 <br>![](images/get_token.png)
 
 ### Create a collection
-To insert your document chunks into the vector store, we first need to create a collection. A collection is a logical container used to store and manage embedded documents.  
+To insert your document chunks into the SAP HANA vector store, we first need to create a collection. A collection is a logical container used to store and manage embedded documents.  
 
 ➡️ Expand **_06_vector_** and select ```POST create_collections```.
 
-➡️ Replace collection name ```<TITLE>``` by **Kasimir** and ```<VALUE>``` in _metadata.value_ by **"Kasimirs TechEd Cat Policy"**.  
+➡️ Replace collection name ```<TITLE>``` by **"Kasimir"** and ```<VALUE>``` in _metadata.value_ by **"Kasimirs TechEd Cat Policy"**.  
 
 The embedding model is already defined, that is used during the vectorization. Currently only supported model is _text-embedding-3-large_.
 
@@ -129,7 +129,7 @@ Your payload should look like the following:
 
 Next we need to get the **collection id** that we need for creating the chunks.  
 
-➡️ Select ```GET get_all_collections``` and run the request and copy the collection id from the result. 
+➡️ Select ```GET get_all_collections``` and run the request and **copy the collection id** from the result. 
 
 <p>
 <img src="images/get_collections.png" width="900"/>
@@ -145,6 +145,12 @@ After successfully created the collection we can now upload the document chunks 
 <img src="images/select_create_doc.png" width="900"/>
 </p>
 
+➡️ Replace the ```<COLLECTION_ID>``` in the URL and run the request. 
+
+<p>
+<img src="images/run_chunks_creation.png" width="900"/>
+</p>
+
 In this **POST** request you can define a metadata key value pair for the overall document collection and create multiple text content in chunks where each of them also have the option of metadata key value pairs. 
 
 We are going to add the following 4 chunks: 
@@ -154,7 +160,7 @@ Kasimir's TechEd Policies:
 1. "Kasimir is the only cat that is welcome in all TechEd sessions, as long as he doesn't sleep on the keyboard"
 2. "If Kasimir walks across the stage, the speaker must pause and pet him"
 3. "Kasimir insists that every prompt engineering at TechEd starts with the phrase 'Dear Cat Overlord' "
-4. "Kasimir is the only one allowed to wear a hoodie that says '#1 AI Expert'"
+4. "The only dog that Kasimir accepts at TechED is Bruno!'"
 ```
 
 ➡️ Replace each of the placeholder **<CHUNK_1>** to **<CHUNK_4>** with **Kasimirs TechEd Policy** sentences. 
@@ -213,7 +219,7 @@ Your body should look like the following:
           ]
         },
                 {
-          "content": "Kasimir is the only one allowed to wear a hoodie that says '#1 AI Expert'",
+          "content": "The only dog that Kasimir accepts at TechED is Bruno!",
           "metadata": [
             {
               "key": "index",
@@ -229,12 +235,6 @@ Your body should look like the following:
 }
 </code></pre>
 </div>
-
-➡️ Replace the ```<COLLECTION_ID>``` in the URL and run the request. 
-
-<p>
-<img src="images/run_chunks_creation.png" width="900"/>
-</p>
 
 After successful execution response got returned with the **document ID**
 
@@ -281,22 +281,25 @@ Let us get an overview on all repositories that are available.
  The value of key ```type``` tells what kind of data repository it is:  
 - type: "vector" → your custom vector collection (embeddings you created).
 - type: "help.sap.com" → built‑in SAP Help Portal ([Exercise 1](ex2-get-started-with-grounding.ipynb))
+➡️ Copy the ```id``` of you data repository. 
 
 ### Retrieval
 Next let us do the data retrieval to retrieve a content based answer, by using our data repository. 
 
-➡️ select ```POST retrieval_vector```
+➡️ select ```POST retrieval```
 <p>
-<img src="images/post_retrieval_vector.png" width="900"/>
+<img src="images/post_retrieval.png" width="900"/>
 </p>
 
 In the body of the retrieval search you can define several retrieval constraints. Most of them are optional and can be empty. The one that are relevant for our exercise are:
 - ```query``` that will be embed and match against the stored chunks
 - ```dataRepositoryType``` to define the kind of data repository, in our case **vector**
+- ```dataRepositories"``to list the data repositories you want to use
 - ```maxChunkCount```: maximum number of chunks to be returned
 
 
 ➡️ Next replace in the Body ```<QUERY>```  by ``` "Are cats allowed at TechEd? " ```  
+➡️ Add in the data repository id to ``` dataRepositories" ``` array.  
 ➡️ Run the request. 
 
 <p>
@@ -312,13 +315,13 @@ This helps to rank the chunks by score to select top-k context for grounding e.g
 
 🎉 Congratulations you successfully created you first data repository and run your first retrieval search. 🎉
 
-If you want more you can also try out the following queries and also change number of ```maxCHunkCount```.
+If you want more you can also try out the following queries and also change number of ```maxChunkCount```.
 ```
 Questions:
 
 "How do I start a prompt?"
 "What happens if Kasimir walks on stage during a talk?"
-"Who is allowed to wear a '#1 AI Expert' hoodie?"
+"Are dogs allowed at TechEd?"
 ```
 ## Summary
 
