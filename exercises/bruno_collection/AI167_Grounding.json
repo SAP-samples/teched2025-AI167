@@ -219,200 +219,6 @@
     },
     {
       "type": "folder",
-      "name": "03_generic_secret",
-      "filename": "03_generic_secret",
-      "items": [
-        {
-          "type": "http",
-          "name": "create",
-          "filename": "create.bru",
-          "seq": 2,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{ai_api_url}}/v2/admin/secrets",
-            "method": "POST",
-            "headers": [
-              {
-                "name": "AI-Resource-Group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "json",
-              "json": "{\n  \"name\": \"canary-rg1-secret\",\n  \"data\": {\n    \"type\": \"SFRUUA==\",\n    \"description\": \"<>DESCRIPTION\",\n    \"clientId\": \"<>CLIENT_ID\",\n    \"authentication\": \"<AUTHENTICATION>\",\n    \"tokenServiceURL\": \"<TOKENSERVICEURL>\",\n    \"password\": \"<PSWD>\",\n    \"proxyType\": \"<PROXY>\",\n    \"url\": \"<url>\",\n    \"tokenServiceURLType\": \"<TOKENSERVICEURLTYPE>\",\n    \"user\": \"<USER>\",\n    \"clientSecret\": \"<CLIENTSECRET>\",\n    \"scope\": \"<SCOPE>\"\n  },\n  \"labels\": [\n    {\n      \"key\": \"ext.ai.sap.com/document-grounding\",\n      \"value\": \"true\"\n    }\n  ]\n}",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        },
-        {
-          "type": "http",
-          "name": "delete",
-          "filename": "delete.bru",
-          "seq": 3,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{ai_api_url}}/v2/admin/secrets/canary-rg1-secret",
-            "method": "DELETE",
-            "headers": [
-              {
-                "name": "AI-Resource-Group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "none",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        },
-        {
-          "type": "http",
-          "name": "get_all copy",
-          "filename": "get_all copy.bru",
-          "seq": 5,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{ai_api_url}}/v2/admin/secrets",
-            "method": "GET",
-            "headers": [
-              {
-                "name": "AI-Resource-Group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "none",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        },
-        {
-          "type": "http",
-          "name": "get_all",
-          "filename": "get_all.bru",
-          "seq": 1,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{ai_api_url}}/v2/admin/secrets",
-            "method": "GET",
-            "headers": [
-              {
-                "name": "AI-Resource-Group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "none",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        },
-        {
-          "type": "http",
-          "name": "update",
-          "filename": "update.bru",
-          "seq": 4,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{ai_api_url}}/v2/admin/secrets/canary-rg-secret",
-            "method": "PATCH",
-            "headers": [
-              {
-                "name": "AI-Resource-Group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "json",
-              "json": "{\n  \"data\": {\n    \"clientId\": \"<CLIENT_ID>\"\n  }\n}",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "folder",
       "name": "02_deployments",
       "filename": "02_deployments",
       "items": [
@@ -957,126 +763,6 @@
     },
     {
       "type": "folder",
-      "name": "05_orchestration",
-      "filename": "05_orchestration",
-      "items": [
-        {
-          "type": "http",
-          "name": "completion",
-          "filename": "completion.bru",
-          "seq": 1,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{orchestration_service_url}}/completion",
-            "method": "POST",
-            "headers": [
-              {
-                "name": "ai-resource-group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "json",
-              "json": "{\n  \"orchestration_config\": {\n    \"module_configurations\": {\n      \"grounding_module_config\": {\n        \"type\": \"document_grounding_service\",\n        \"config\": {\n          \"filters\": [\n            {\n              \"id\": \"filter1\",\n              \"data_repositories\": [\n                \"*\"\n              ],\n              \"search_config\": {\n                \"max_chunk_count\": 10\n              },\n              \"data_repository_type\": \"vector\"\n            }\n          ],\n          \"input_params\": [\n            \"groundingRequest\"\n          ],\n          \"output_param\": \"groundingOutput\"\n        }\n      },\n      \"llm_module_config\": {\n        \"model_name\": \"\",\n        \"model_params\": {},\n        \"model_version\": \"latest\"\n      },\n      \"templating_module_config\": {\n        \"template\": [\n          {\n            \"role\": \"user\",\n            \"content\": \"\"\n          }\n        ],\n        \"defaults\": {}\n      },\n      \"filtering_module_config\": {\n        \"input\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        },\n        \"output\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        }\n      }\n    }\n  },\n  \"input_params\": {\n    \"groundingRequest\": \"\"\n  }\n}",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        },
-        {
-          "type": "http",
-          "name": "completion_help",
-          "filename": "completion_help.bru",
-          "seq": 2,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{orchestration_service_url}}/completion",
-            "method": "POST",
-            "headers": [
-              {
-                "name": "ai-resource-group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "json",
-              "json": "{\n  \"orchestration_config\": {\n    \"module_configurations\": {\n      \"grounding_module_config\": {\n        \"type\": \"document_grounding_service\",\n        \"config\": {\n          \"filters\": [\n            {\n              \"id\": \"filter1\",\n              \"data_repositories\": [\n                \"*\"\n              ],\n              \"search_config\": {},\n              \"data_repository_type\": \"help.sap.com\"\n            }\n          ],\n          \"input_params\": [\n            \"groundingRequest\"\n          ],\n          \"output_param\": \"groundingOutput\"\n        }\n      },\n      \"llm_module_config\": {\n        \"model_name\": \"\",\n        \"model_params\": {},\n        \"model_version\": \"001\"\n      },\n      \"templating_module_config\": {\n        \"template\": [\n          {\n            \"role\": \"user\",\n            \"content\": \"You are a helpful assistant for any queries for SAP Teched 2025.\\\\nAnswer the grounding request by providing relevant answers that fit to the request. \\\\n\\\\nRequest: {{ ?groundingRequest }}\\\\n\\\\nReports:{{ ?groundingOutput }}\"\n          }\n        ],\n        \"defaults\": {}\n      },\n      \"filtering_module_config\": {\n        \"input\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        },\n        \"output\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        }\n      }\n    }\n  },\n  \"input_params\": {\n    \"groundingRequest\": \"what is joule?\"\n  }\n}",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        },
-        {
-          "type": "http",
-          "name": "get_foundation_models",
-          "filename": "get_foundation_models.bru",
-          "seq": 3,
-          "settings": {},
-          "tags": [],
-          "request": {
-            "url": "{{ai_api_url}}/v2/lm/scenarios/foundation-models/models",
-            "method": "GET",
-            "headers": [
-              {
-                "name": "AI-Resource-Group",
-                "value": "{{resource_group}}",
-                "enabled": true
-              }
-            ],
-            "params": [],
-            "body": {
-              "mode": "none",
-              "formUrlEncoded": [],
-              "multipartForm": [],
-              "file": []
-            },
-            "script": {},
-            "vars": {},
-            "assertions": [],
-            "tests": "",
-            "docs": "",
-            "auth": {
-              "mode": "bearer",
-              "bearer": {
-                "token": "{{access_token}}"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "folder",
       "name": "06_vector",
       "filename": "06_vector",
       "items": [
@@ -1138,7 +824,7 @@
             "params": [],
             "body": {
               "mode": "json",
-              "json": "{\n  \"documents\": [\n    {\n      \"metadata\": [\n        {\n          \"key\": \"purpose\",\n          \"value\": [\n            \"Kasimirs TechEd Cat Policy\"\n          ]\n        }\n      ],\n      \"chunks\": [\n        {\n          \"content\": \"<CHUNCK_1>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"1\"\n              ]\n            }\n          ]\n        },\n                {\n          \"content\": \"<CHUNCK_2>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"2\"\n              ]\n            }\n          ]\n        },\n                {\n          \"content\": \"<CHUNCK_3>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"3\"\n              ]\n            }\n          ]\n        },\n                {\n          \"content\": \"<CHUNCK_4>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"4\"\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "json": "{\n  \"documents\": [\n    {\n      \"metadata\": [\n        {\n          \"key\": \"purpose\",\n          \"value\": [\n            \"Kasimirs TechEd Cat Policy\"\n          ]\n        }\n      ],\n      \"chunks\": [\n        {\n          \"content\": \"<CHUNK_1>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"1\"\n              ]\n            }\n          ]\n        },\n                {\n          \"content\": \"<CHUNK_2>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"2\"\n              ]\n            }\n          ]\n        },\n                {\n          \"content\": \"<CHUNK_3>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"3\"\n              ]\n            }\n          ]\n        },\n                {\n          \"content\": \"<CHUNK_4>\",\n          \"metadata\": [\n            {\n              \"key\": \"index\",\n              \"value\": [\n                \"4\"\n              ]\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
               "formUrlEncoded": [],
               "multipartForm": [],
               "file": []
@@ -1494,6 +1180,200 @@
     },
     {
       "type": "folder",
+      "name": "03_generic_secret",
+      "filename": "03_generic_secret",
+      "items": [
+        {
+          "type": "http",
+          "name": "create",
+          "filename": "create.bru",
+          "seq": 2,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{ai_api_url}}/v2/admin/secrets",
+            "method": "POST",
+            "headers": [
+              {
+                "name": "AI-Resource-Group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\": \"canary-rg1-secret\",\n  \"data\": {\n    \"type\": \"SFRUUA==\",\n    \"description\": \"<>DESCRIPTION\",\n    \"clientId\": \"<>CLIENT_ID\",\n    \"authentication\": \"<AUTHENTICATION>\",\n    \"tokenServiceURL\": \"<TOKENSERVICEURL>\",\n    \"password\": \"<PSWD>\",\n    \"proxyType\": \"<PROXY>\",\n    \"url\": \"<url>\",\n    \"tokenServiceURLType\": \"<TOKENSERVICEURLTYPE>\",\n    \"user\": \"<USER>\",\n    \"clientSecret\": \"<CLIENTSECRET>\",\n    \"scope\": \"<SCOPE>\"\n  },\n  \"labels\": [\n    {\n      \"key\": \"ext.ai.sap.com/document-grounding\",\n      \"value\": \"true\"\n    }\n  ]\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "delete",
+          "filename": "delete.bru",
+          "seq": 3,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{ai_api_url}}/v2/admin/secrets/canary-rg1-secret",
+            "method": "DELETE",
+            "headers": [
+              {
+                "name": "AI-Resource-Group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "get_all copy",
+          "filename": "get_all copy.bru",
+          "seq": 5,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{ai_api_url}}/v2/admin/secrets",
+            "method": "GET",
+            "headers": [
+              {
+                "name": "AI-Resource-Group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "get_all",
+          "filename": "get_all.bru",
+          "seq": 1,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{ai_api_url}}/v2/admin/secrets",
+            "method": "GET",
+            "headers": [
+              {
+                "name": "AI-Resource-Group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "update",
+          "filename": "update.bru",
+          "seq": 4,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{ai_api_url}}/v2/admin/secrets/canary-rg-secret",
+            "method": "PATCH",
+            "headers": [
+              {
+                "name": "AI-Resource-Group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"data\": {\n    \"clientId\": \"<CLIENT_ID>\"\n  }\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
       "name": "07_retrieval",
       "filename": "07_retrieval",
       "items": [
@@ -1573,8 +1453,8 @@
         },
         {
           "type": "http",
-          "name": "retrieval_vector",
-          "filename": "retrieval_vector.bru",
+          "name": "retrieval",
+          "filename": "retrieval.bru",
           "seq": 4,
           "settings": {},
           "tags": [],
@@ -1613,33 +1493,110 @@
               }
             }
           }
-        },
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "05_orchestration",
+      "filename": "05_orchestration",
+      "items": [
         {
           "type": "http",
-          "name": "retrieval_pipeline",
-          "filename": "retrieval_pipeline.bru",
-          "seq": 3,
+          "name": "completion",
+          "filename": "completion.bru",
+          "seq": 1,
           "settings": {},
           "tags": [],
           "request": {
-            "url": "{{ai_api_url}}{{common_endpoint}}/retrieval/search",
+            "url": "{{orchestration_service_url}}/completion",
             "method": "POST",
             "headers": [
               {
-                "name": "AI-Resource-Group",
+                "name": "ai-resource-group",
                 "value": "{{resource_group}}",
-                "enabled": true
-              },
-              {
-                "name": "Content-Type",
-                "value": "application/json",
                 "enabled": true
               }
             ],
             "params": [],
             "body": {
               "mode": "json",
-              "json": "{\n  \"query\": \"...\",\n  \"filters\": [\n    {\n      \"id\": \"string\",\n      \"searchConfiguration\": {},\n      \"dataRepositories\": [\n        \"<DATA REPOSITORY_ID>\"\n      ],\n      \"dataRepositoryType\": \"vector\",\n      \"dataRepositoryMetadata\": [],\n      \"documentMetadata\": [],\n      \"chunkMetadata\": []\n    }\n  ]\n} ",
+              "json": "{\n  \"orchestration_config\": {\n    \"module_configurations\": {\n      \"grounding_module_config\": {\n        \"type\": \"document_grounding_service\",\n        \"config\": {\n          \"filters\": [\n            {\n              \"id\": \"filter1\",\n              \"data_repositories\": [\n                \"*\"\n              ],\n              \"search_config\": {\n                \"max_chunk_count\": 10\n              },\n              \"data_repository_type\": \"vector\"\n            }\n          ],\n          \"input_params\": [\n            \"groundingRequest\"\n          ],\n          \"output_param\": \"groundingOutput\"\n        }\n      },\n      \"llm_module_config\": {\n        \"model_name\": \"\",\n        \"model_params\": {},\n        \"model_version\": \"latest\"\n      },\n      \"templating_module_config\": {\n        \"template\": [\n          {\n            \"role\": \"user\",\n            \"content\": \"\"\n          }\n        ],\n        \"defaults\": {}\n      },\n      \"filtering_module_config\": {\n        \"input\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        },\n        \"output\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        }\n      }\n    }\n  },\n  \"input_params\": {\n    \"groundingRequest\": \"\"\n  }\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "completion_help",
+          "filename": "completion_help.bru",
+          "seq": 2,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{orchestration_service_url}}/completion",
+            "method": "POST",
+            "headers": [
+              {
+                "name": "ai-resource-group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"orchestration_config\": {\n    \"module_configurations\": {\n      \"grounding_module_config\": {\n        \"type\": \"document_grounding_service\",\n        \"config\": {\n          \"filters\": [\n            {\n              \"id\": \"filter1\",\n              \"data_repositories\": [\n                \"*\"\n              ],\n              \"search_config\": {},\n              \"data_repository_type\": \"help.sap.com\"\n            }\n          ],\n          \"input_params\": [\n            \"groundingRequest\"\n          ],\n          \"output_param\": \"groundingOutput\"\n        }\n      },\n      \"llm_module_config\": {\n        \"model_name\": \"\",\n        \"model_params\": {},\n        \"model_version\": \"001\"\n      },\n      \"templating_module_config\": {\n        \"template\": [\n          {\n            \"role\": \"user\",\n            \"content\": \"You are a helpful assistant for any queries for SAP Teched 2025.\\\\nAnswer the grounding request by providing relevant answers that fit to the request. \\\\n\\\\nRequest: {{ ?groundingRequest }}\\\\n\\\\nReports:{{ ?groundingOutput }}\"\n          }\n        ],\n        \"defaults\": {}\n      },\n      \"filtering_module_config\": {\n        \"input\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        },\n        \"output\": {\n          \"filters\": [\n            {\n              \"type\": \"azure_content_safety\",\n              \"config\": {\n                \"Hate\": 2,\n                \"SelfHarm\": 2,\n                \"Sexual\": 2,\n                \"Violence\": 2\n              }\n            }\n          ]\n        }\n      }\n    }\n  },\n  \"input_params\": {\n    \"groundingRequest\": \"what is joule?\"\n  }\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "{{access_token}}"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "get_foundation_models",
+          "filename": "get_foundation_models.bru",
+          "seq": 3,
+          "settings": {},
+          "tags": [],
+          "request": {
+            "url": "{{ai_api_url}}/v2/lm/scenarios/foundation-models/models",
+            "method": "GET",
+            "headers": [
+              {
+                "name": "AI-Resource-Group",
+                "value": "{{resource_group}}",
+                "enabled": true
+              }
+            ],
+            "params": [],
+            "body": {
+              "mode": "none",
               "formUrlEncoded": [],
               "multipartForm": [],
               "file": []
@@ -1660,7 +1617,7 @@
       ]
     }
   ],
-  "activeEnvironmentUid": "6vjGU63d41gB7GkVDl7VS",
+  "activeEnvironmentUid": "M9Zgx7Pa0dGunGnliXnLU",
   "environments": [
     {
       "variables": [

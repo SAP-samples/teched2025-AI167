@@ -46,9 +46,6 @@ Please log in with your username and password provided in the workshop room and 
 Once you successfully logged in, you will be redirected to the BTP Cockpit. To see the list of subaccount you need to click on **Account Explorer**.
 
 ➡️ Next click on the tile of your respective subaccount **AI167_XXX**.
-
-TODO: I just tried this with the test account 042, and I am immediately redirected to the subaccount. I think your screenshots
-are taken from the admin account, which has access to all the subaccounts.
 <p>
 <img src="images/access_subaccount.png" width="900"/>
 </p>
@@ -56,15 +53,13 @@ are taken from the admin account, which has access to all the subaccounts.
 
 ➡️ Got to  **Instances and Subscription** and open the SAP AI Core Instance's **credentials**. 
 
-TODO: this is not possible when logged in as non-admin user. I mailed Zonghua about this.
 <p>
 <img src="images/copy_json.png" width="900"/>
 </p>
 
 ➡️ Click **Copy Json**
 
-➡️ Return to Visual Studio Code and create a new file ```.aicore-config.json```in the ```TECHED2025-AI167``` directory.
-
+➡️ Return to Visual Studio Code and create a new file ```.aicore-config.json```in the ```TECHED2025-AI167``` directory. 
 <p>
 <img src="images/new_file.png" width="900"/>
 </p>
@@ -75,6 +70,33 @@ TODO: this is not possible when logged in as non-admin user. I mailed Zonghua ab
 </p>
 
 ➡️  Save the file.
+
+## 1.2 Configure connection details Object Store 
+Last but not least we have to do the same for the Object Store, that we are going to later in this hands-on session.
+The service keys you will get in the BTP cockpit in the respective service instance, as described in the next steps. 
+
+
+➡️ Navigate back again to  **Instances and Subscription** and open this time the  Object Store instance's service key.
+
+<p>
+<img src="images/s3_service_key.png" width="900"/>
+</p>
+
+➡️ Click **Copy Json**
+
+➡️ Return to Visual Studio Code and create a new file ```.objectsStore-config.json```in the ```TECHED2025-AI167``` directory. 
+<p>
+<img src="images/new_file.png" width="900"/>
+</p>
+
+➡️ Paste in the object store service key into ```TECHED2025-AI167/.objectsStore-config.json```, which should look similar to the following.
+<p>
+<img src="images/object_store_config.png" width="900"/>
+</p>
+
+➡️  Save the file. 
+
+
 
 ## 1.3 Create a Python virtual environment and install the SAP Cloud SDK for AI
 
@@ -109,7 +131,9 @@ pip install --require-virtualenv -U  "sap-ai-sdk-gen[all]"
 
 # For the next Exercise, continue in Visual Studio Code
 
-> 🟨 **TODO:**  
-> _Add screenshot for Visual Code_
+⚠️  In case Visual Studio Code ask to install ipykernel package - simple click install.
+<p>
+<img src="images/vsc_install_kernel.png" width="700"/>
+</p>
 
 Continue to - [Exercise 2 - Get Started with Grounding ](ex2-get-started-with-grounding.ipynb)

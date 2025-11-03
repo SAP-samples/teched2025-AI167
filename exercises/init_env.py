@@ -1,12 +1,11 @@
 import os
 import json
 
-import variables as variables
-
 ROOT_PATH_DIR = os.path.dirname(os.getcwd())
 AICORE_CONFIG_FILENAME = '.aicore-config.json'
-OBJECTSTORE_CONFIG_FILENAME = '.objectstore-config.json'
+OBJECTSTORE_CONFIG_FILENAME = '.objectStore-config.json'
 OBJECTSTORE_CONFIG_PATH = os.path.join(ROOT_PATH_DIR, OBJECTSTORE_CONFIG_FILENAME)
+RESOURCE_GROUP = "AI167"
 
 # If file does not exist, do nothing
 
@@ -19,7 +18,7 @@ def set_environment_variables() -> None:
     os.environ["AICORE_CLIENT_SECRET"]=config_data["clientsecret"]
     os.environ["AICORE_BASE_URL"]=config_data["serviceurls"]["AI_API_URL"]
 
-    os.environ["AICORE_RESOURCE_GROUP"]=variables.RESOURCE_GROUP
+    os.environ["AICORE_RESOURCE_GROUP"]=RESOURCE_GROUP
 
 
     # Object store (optional)

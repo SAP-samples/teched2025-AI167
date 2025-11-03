@@ -1,26 +1,22 @@
 # AI167 - Ground your AI in business context: A hands-on with document grounding
 
-> ⚠️ **Work in Progress**
->
-> This documentation is still under development. Content, instructions, and examples may change. Please check back for updates.
->
-> 🟨 **Note:** Please keep remain the **private** until the content is finalized.
-
 ## Description
 
 This repository contains the material for the SAP TechEd 2025 session called AI167 - Ground your AI in business context: A hands-on with document grounding.  
 
 ## Overview
 
-In this hands-on session, will learn how to drive your custom AI use cases using document grounding capabilities in the generative AI hub.
+In this hands-on session, we will explore how to make Large Language Models truly enterprise-ready by grounding them with your own business data using Grounding in SAP GenAI Hub.
+Throughout this lab, you will learn how to:   
 
+- Build and manage data repositories for grounding.  
+- Create embeddings using the Vector API.  
+- Process full documents using the Pipeline API.  
+- Retrieve relevant context with the Retrieval API.  
+- Apply grounding end-to-end using the Orchestration layer in SAP GenAI Hub.  
 
-> 📝 **TODO:**  
-> Detailed description on what they will learn._
-Data Management APIs:
-* Pipeline API
-* Vector API
-* Retrieval API
+By the end of this session, you will have hands-on experience turning an LLM from a general-purpose assistant into a trusted, context-aware enterprise AI system that answers based on your data — not guesses.
+So get ready — this is where ideas get real.
 
 ## Requirements
 
@@ -37,7 +33,6 @@ The requirements to follow the exercises in this repository are:
     - [Exercise 3.1 - Provide chunks of documents via Vector API](exercises/ex3-1-grounding-vector-api##exercise31-Provide-the-chunks-of-document-via-Vector-API-directly)
     - [Exercise 3.2 - Upload File to S3](exercises/ex3-2-upload-file-s3.md)
     - [Exercise 3.3 - Use data pipeline to vectorize documents](exercises/ex3-3-grounding-data-pipeline.ipynb)
-- [Exercise 4 - Multi-Modal Capability](exercises/ex4-multi-modal.ipynb) 
 
 
 ## Contributing

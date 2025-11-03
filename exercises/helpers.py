@@ -2,10 +2,12 @@
 import os, json
 from ai_core_sdk.ai_core_v2_client import AICoreV2Client
 import requests
-import variables
+import init_env
 
 def extract_deployment_url():
     # instantiate client (do NOT set client-level resource_group to avoid tenant-scope conflicts)
+    init_env.set_environment_variables()
+
     client = AICoreV2Client(
         base_url=os.environ["AICORE_BASE_URL"] + "/v2",
         auth_url=os.environ["AICORE_AUTH_URL"],
@@ -17,7 +19,7 @@ def extract_deployment_url():
     headers = {
         "Authorization": client.rest_client.get_token(),
         "AI-Tenant-Scope": "false",
-        "AI-Resource-Group": variables.RESOURCE_GROUP
+        "AI-Resource-Group": os.environ["AICORE_RESOURCE_GROUP"],
     }
 
     resp = requests.get(url, headers=headers)
