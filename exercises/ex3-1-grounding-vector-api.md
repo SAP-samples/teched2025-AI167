@@ -68,12 +68,12 @@ We are almost there. As the final step we need to set the environment variables 
 
 Use the following mapping add the correct Name-Value pair:
 
-| Bruno Env Variables | .aicore-config.json |
-|------|-------------|
-| ai_auth_url | url |
-| ai_api_url| AI_API_URL|
-| client_id | clientid|
-| client_secret | clientid|
+| Bruno Env Variables | .aicore-config.json    |
+|------|------------------------|
+| ai_auth_url | url                    |
+| ai_api_url| serviceurls.AI_API_URL |
+| client_id | clientid               |
+| client_secret | clientsecret           |
 <p>
 <img src="images/bruno_add_values.png" width="900"/>
 </p>
