@@ -117,7 +117,9 @@ python3 -m venv ai167env --upgrade-deps
 ```
 Activate the virtual environment ```ai167env``` like this and make sure it is activated. 
 
-On Windows, run the following command in the terminal:
+**If you are attending TechEd in person, follow the instructions for Windows below!**
+
+**On Windows**, run the following command in the terminal:
 
 ```powershell
 .\ai167env/Scripts/activate
