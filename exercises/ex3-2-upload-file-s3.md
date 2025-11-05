@@ -25,7 +25,7 @@ The values for the respective key you get from the service key from your Object 
 
 ➡️ Take values from TECHED2025-AI167/.objectStore-config.json and copy the respective value from the service key into Bruno.
 
-➡️ After you added teh values, select **Save** and then **Activate**
+➡️ After you added the values, select **Save** and then **Activate**
 
 <p>
 <img src="images/s3_save_activate.png" width="900"/>
@@ -43,6 +43,8 @@ We want to upload **Kasimirs SAP TechEd Edition.pdf** to the Object Store.
 <p>
 <img src="images/s3_open_file.png" width="900"/>
 </p>
+
+⚠️ Remember to update the `<FILENAME>` placeholder in the URL!
 
 ➡️  Run the request.
 
