@@ -7,8 +7,6 @@
       "name": "get_token",
       "filename": "get_token.bru",
       "seq": 1,
-      "settings": {},
-      "tags": [],
       "request": {
         "url": "{{ai_auth_url}}/oauth/token",
         "method": "POST",
@@ -59,8 +57,7 @@
       "name": "health",
       "filename": "health.bru",
       "seq": 2,
-      "settings": {},
-      "tags": [],
+
       "request": {
         "url": "{{ai_api_url}}/api/v1/healthz",
         "method": "GET",
@@ -95,8 +92,7 @@
           "name": "create",
           "filename": "create.bru",
           "seq": 1,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/resourceGroups",
             "method": "POST",
@@ -127,8 +123,7 @@
           "name": "delete_by_id",
           "filename": "delete_by_id.bru",
           "seq": 4,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/resourceGroups/{{resource_group}}",
             "method": "DELETE",
@@ -158,8 +153,7 @@
           "name": "get",
           "filename": "get.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/resourceGroups",
             "method": "GET",
@@ -189,8 +183,7 @@
           "name": "get_by_id",
           "filename": "get_by_id.bru",
           "seq": 3,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/resourceGroups/{{resource_group}}",
             "method": "GET",
@@ -227,8 +220,7 @@
           "name": "create_configuration",
           "filename": "create_configuration.bru",
           "seq": 3,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/configurations",
             "method": "POST",
@@ -265,8 +257,7 @@
           "name": "create_deployment",
           "filename": "create_deployment.bru",
           "seq": 5,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/deployments",
             "method": "POST",
@@ -303,8 +294,7 @@
           "name": "delete_deployment_id",
           "filename": "delete_deployment_id.bru",
           "seq": 9,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/deployments/<DEPLOYMENT_ID>",
             "method": "DELETE",
@@ -341,8 +331,7 @@
           "name": "get_configuration",
           "filename": "get_configuration.bru",
           "seq": 4,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/configurations",
             "method": "GET",
@@ -378,8 +367,7 @@
           "name": "get_deployment",
           "filename": "get_deployment.bru",
           "seq": 6,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/deployments",
             "method": "GET",
@@ -416,8 +404,7 @@
           "name": "get_deployment_id",
           "filename": "get_deployment_id.bru",
           "seq": 7,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/deployments/<DEPLOYMENT_ID>",
             "method": "GET",
@@ -454,8 +441,7 @@
           "name": "get_scenario",
           "filename": "get_scenario.bru",
           "seq": 1,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/scenarios",
             "method": "GET",
@@ -491,8 +477,7 @@
           "name": "get_scenario_executable",
           "filename": "get_scenario_executable.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/scenarios/orchestration/executables",
             "method": "GET",
@@ -528,8 +513,7 @@
           "name": "stop_deployment_id",
           "filename": "stop_deployment_id.bru",
           "seq": 8,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/deployments/<DEPLOYMENT_ID>",
             "method": "PATCH",
@@ -573,8 +557,7 @@
           "name": "create_pipeline",
           "filename": "create_pipeline.bru",
           "seq": 1,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/pipelines",
             "method": "POST",
@@ -616,8 +599,7 @@
           "name": "delete_pipeline_by_pipeline_id",
           "filename": "delete_pipeline_by_pipeline_id.bru",
           "seq": 5,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/pipelines/<PIPELINE_ID>",
             "method": "DELETE",
@@ -653,8 +635,7 @@
           "name": "get_all_pipelines",
           "filename": "get_all_pipelines.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/pipelines",
             "method": "GET",
@@ -690,8 +671,7 @@
           "name": "get_pipeline_by_pipeline_id",
           "filename": "get_pipeline_by_pipeline_id.bru",
           "seq": 3,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/pipelines/<PIPELINE_ID>",
             "method": "GET",
@@ -727,8 +707,7 @@
           "name": "get_pipeline_status_by_pipeline_id",
           "filename": "get_pipeline_status_by_pipeline_id.bru",
           "seq": 4,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/pipelines/<PIPELINE_ID>/status",
             "method": "GET",
@@ -771,8 +750,7 @@
           "name": "create_collections",
           "filename": "create_collections.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections",
             "method": "POST",
@@ -809,8 +787,7 @@
           "name": "create_documents",
           "filename": "create_documents.bru",
           "seq": 5,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/documents",
             "method": "POST",
@@ -847,8 +824,7 @@
           "name": "delete_collection_by_id",
           "filename": "delete_collection_by_id.bru",
           "seq": 12,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>",
             "method": "DELETE",
@@ -884,8 +860,7 @@
           "name": "delete_documents_by_id",
           "filename": "delete_documents_by_id.bru",
           "seq": 9,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/documents/<DOCUMENT_ID>",
             "method": "DELETE",
@@ -921,8 +896,7 @@
           "name": "get_all_collections",
           "filename": "get_all_collections.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections",
             "method": "GET",
@@ -958,8 +932,7 @@
           "name": "get_all_documents_by_collection_id",
           "filename": "get_all_documents_by_collection_id.bru",
           "seq": 6,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/documents",
             "method": "GET",
@@ -995,8 +968,7 @@
           "name": "get_collection_by_id",
           "filename": "get_collection_by_id.bru",
           "seq": 4,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/document-grounding/vector/collections/<COLLECTION_ID>",
             "method": "GET",
@@ -1032,8 +1004,7 @@
           "name": "get_collection_creation_status_by_id",
           "filename": "get_collection_creation_status_by_id.bru",
           "seq": 3,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/creationStatus",
             "method": "GET",
@@ -1069,8 +1040,7 @@
           "name": "get_collection_deletion_status_by_id",
           "filename": "get_collection_deletion_status_by_id.bru",
           "seq": 13,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/deletionStatus",
             "method": "GET",
@@ -1106,8 +1076,7 @@
           "name": "get_documents_by_id",
           "filename": "get_documents_by_id.bru",
           "seq": 7,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/documents/<DOCUMENT_ID>",
             "method": "GET",
@@ -1143,8 +1112,7 @@
           "name": "update_documents",
           "filename": "update_documents.bru",
           "seq": 8,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/vector/collections/<COLLECTION_ID>/documents",
             "method": "PATCH",
@@ -1188,8 +1156,7 @@
           "name": "create",
           "filename": "create.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/secrets",
             "method": "POST",
@@ -1226,8 +1193,7 @@
           "name": "delete",
           "filename": "delete.bru",
           "seq": 3,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/secrets/canary-rg1-secret",
             "method": "DELETE",
@@ -1263,8 +1229,7 @@
           "name": "get_all copy",
           "filename": "get_all copy.bru",
           "seq": 5,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/secrets",
             "method": "GET",
@@ -1300,8 +1265,7 @@
           "name": "get_all",
           "filename": "get_all.bru",
           "seq": 1,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/secrets",
             "method": "GET",
@@ -1337,8 +1301,7 @@
           "name": "update",
           "filename": "update.bru",
           "seq": 4,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/admin/secrets/canary-rg-secret",
             "method": "PATCH",
@@ -1382,8 +1345,7 @@
           "name": "dataRepositories by id",
           "filename": "dataRepositories by id.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/retrieval/dataRepositories/<DATA REPOSITORY_ID>",
             "method": "GET",
@@ -1419,8 +1381,7 @@
           "name": "dataRepositories",
           "filename": "dataRepositories.bru",
           "seq": 1,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/retrieval/dataRepositories",
             "method": "GET",
@@ -1456,8 +1417,7 @@
           "name": "retrieval",
           "filename": "retrieval.bru",
           "seq": 4,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}{{common_endpoint}}/retrieval/search",
             "method": "POST",
@@ -1506,8 +1466,7 @@
           "name": "completion",
           "filename": "completion.bru",
           "seq": 1,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{orchestration_service_url}}/completion",
             "method": "POST",
@@ -1544,8 +1503,7 @@
           "name": "completion_help",
           "filename": "completion_help.bru",
           "seq": 2,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{orchestration_service_url}}/completion",
             "method": "POST",
@@ -1582,8 +1540,7 @@
           "name": "get_foundation_models",
           "filename": "get_foundation_models.bru",
           "seq": 3,
-          "settings": {},
-          "tags": [],
+
           "request": {
             "url": "{{ai_api_url}}/v2/lm/scenarios/foundation-models/models",
             "method": "GET",

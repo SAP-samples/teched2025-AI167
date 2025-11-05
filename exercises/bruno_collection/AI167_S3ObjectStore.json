@@ -7,10 +7,6 @@
       "name": "S3 - List Objetcs",
       "filename": "S3 - List Objetcs.bru",
       "seq": 2,
-      "settings": {
-        "encodeUrl": true
-      },
-      "tags": [],
       "request": {
         "url": "https://{{host}}/{{bucket}}",
         "method": "GET",
@@ -45,10 +41,6 @@
       "name": "S3-Upload",
       "filename": "S3-Upload.bru",
       "seq": 1,
-      "settings": {
-        "encodeUrl": true
-      },
-      "tags": [],
       "request": {
         "url": "https://{{bucket}}.{{host}}/<FILENAME>",
         "method": "PUT",

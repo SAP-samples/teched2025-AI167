@@ -105,16 +105,31 @@ The service keys you will get in the BTP cockpit in the respective service insta
 <img src="images/open_terminal.png" width="900"/>
 </p>
 
+➡️ In the terminal, enter "python3" to open the Microsoft shop. In the resulting window,
+click "Get" to install Python. After a few moments, Python should be installed. 
+
+➡️ Go back to the terminal in VS Code.
+
 ➡️ Create a virtual environment using the following command:
 
-```python
+```shell
 python3 -m venv ai167env --upgrade-deps
 ```
 Activate the virtual environment ```ai167env``` like this and make sure it is activated. 
 
-```python
+On Windows, run the following command in the terminal:
+
+```powershell
+.\ai167env/Scripts/activate
+```
+
+Alternatively, on Linux and macOs, or other unix-like systems, run:
+
+```shell
 source ai167env/bin/activate
 ```
+
+⚠️You only need to run one of the commands above, based on your environment.
 
 <p>
 <img src="images/env_active.png" width="900"/>
@@ -125,11 +140,19 @@ source ai167env/bin/activate
 pip install --require-virtualenv -U  "sap-ai-sdk-gen[all]" 
 ```
 
+This command can take a few moments.
+
 > ✨ **More information**  
 > To learn more about SAP CLoud SDK for AI (Python) go [here](https://help.sap.com/doc/generative-ai-hub-sdk/CLOUD/en-US/_reference/README_sphynx.html)  
 > All available SAP Cloud SDK for AI you can find [here](https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/libraries-and-sdks)
 
 # For the next Exercise, continue in Visual Studio Code
+
+When running the individual code cells in the next exercise, Visual Studio Code
+will ask you to `select a Python environment`. Here, pick the `ai167env` we created earlier.
+
+On a fresh environment, windows may prompt you to  allow network access for Visual Studio Code
+Accept this prompt as well.
 
 ⚠️  In case Visual Studio Code ask to install ipykernel package - simple click install.
 <p>

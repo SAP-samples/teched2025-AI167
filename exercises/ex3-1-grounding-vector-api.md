@@ -38,12 +38,17 @@ Once you opened your **Bruno**, you will see the **Welcome** page.
 <img src="images/bruno_choose_file.png" width="900"/>
 </p>
 
-The Bruno collection you find under ```TECHED2025-AI167/exercise/bruno_collection/AI167_Grounding.json```. ( The location of the folder ```TECHED2025-AI167``` is the one you chose in Exercise 1 while cloning the github repos ) 
+The Bruno collection you find under ```TECHED2025-AI167/exercise/bruno_collection/AI167_Grounding.json```. ( The location of the folder ```TECHED2025-AI167``` is the one you chose in Exercise 1 while cloning the github repos )
+
+If you stored the GitHub repository in your home directory on windows, navigate to `Local Disk (C:) -> Users -> $USER -> teched2025-AI167`.
 
 ➡️ Navigate to the ```TECHED2025-AI167/exercise/bruno_collection```and select both collection in this folder:  ```AI167_Grounding.json```and ```S3_FileUpload.json``` (second one we need in [Exercise 3.2](exercise/ex3-2-upload-file-s3.md)) and select **Open**.
 <p>
 <img src="images/bruno_open_collection.png" width="900"/>
 </p>
+
+⚠️ On older versions of Bruno, you will only be able to select a single file. In this case, import both files
+separately!
 
 ➡️ Choose a location (use simple the same location) and select **Import**
 <p>
